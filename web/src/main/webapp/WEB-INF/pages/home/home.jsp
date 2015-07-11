@@ -19,24 +19,23 @@
 					<div class="mdl-layout-spacer"></div>
 					<!-- Navigation. We hide it in small screens. -->
 					<nav class="mdl-navigation mdl-layout--large-screen-only">
-						<a class="mdl-navigation__link" href="<c:url value="/home/home.jsp" />">Login</a>
+						<a class="mdl-navigation__link" href="">Login</a>
 					</nav>
 				</div>
 			</header>
 			<div class="mdl-layout__drawer">
 				<span class="mdl-layout-title">Options</span>
 				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="">Link</a> <a
-						class="mdl-navigation__link" href="">Link</a> <a
-						class="mdl-navigation__link" href="">Link</a> <a
-						class="mdl-navigation__link" href="">Link</a>
+					<a class="mdl-navigation__link" href="">Link</a> 
+					<a class="mdl-navigation__link" href="">Link</a> 
+					<a class="mdl-navigation__link" href="">Link</a> 
+					<a class="mdl-navigation__link" href="">Link</a>
 				</nav>
 			</div>
 			<main class="mdl-layout__content">
 				<div class="page-content">
 					<form action="#">
-						<div
-							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
 							<input class="mdl-textfield__input" type="text" id="sample3" /> 
 							<label class="mdl-textfield__label" for="sample3">Text...</label>
 						</div>
@@ -44,17 +43,6 @@
 					</form>
 				</div>
 			</main>
-
-			<footer class="mdl-mini-footer">
-				<div class="mdl-mini-footer--left-section">
-					<div class="mdl-logo">More Information</div>
-					<ul class="mdl-mini-footer--link-list">
-						<li><a href="#">Help</a></li>
-						<li><a href="#">Privacy and Terms</a></li>
-						<li><a href="#">User Agreement</a></li>
-					</ul>
-				</div>
-			</footer>
 		</div>
 	</body>
 </html> 

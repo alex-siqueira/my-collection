@@ -4,6 +4,16 @@
 
 	<display-name>MyCollection</display-name>
 	
+	<servlet>
+		<servlet-name>home.jsp</servlet-name>
+		<jsp-file>/WEB-INF/pages/home/home.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>home.jsp</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
 	<security-role>
 		<role-name>user</role-name>
 	</security-role>
@@ -12,7 +22,7 @@
 	</security-role>
 
 	<security-constraint>
-		<display-name>Constraint for Home content</display-name>
+		<display-name>Constraint for Home</display-name>
 		<web-resource-collection>
 			<web-resource-name>Home resources</web-resource-name>
 			<url-pattern>/home/*</url-pattern>

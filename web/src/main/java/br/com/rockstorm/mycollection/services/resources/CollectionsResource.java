@@ -14,9 +14,10 @@ import com.google.gson.Gson;
 
 @Path ("/collections")
 public class CollectionsResource {
-	private List<String> collections = Arrays.asList("Books", "Music", "Photos", "Pictures");
+	private List<String> collections = Arrays.asList("Books", "Music", "Photos", "Games");
 
 	@GET
+	@Path("/")
 	@Consumes("text/html")
 	@Produces("application/json")	
 	public Response getCollections(){

@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:if test="${not empty pageContext.request.userPrincipal}">
+	<c:redirect url="/home"/>
+</c:if>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,50 +16,21 @@
 	<body>
 		<!-- Always shows a header, even in smaller screens. -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<header class="mdl-layout__header">
-				<div class="mdl-layout__header-row">
-					<!-- Title -->
-					<span class="mdl-layout-title">MyCollection</span>
-					<!-- Add spacer, to align navigation to the right -->
-					<div class="mdl-layout-spacer"></div>
-					<!-- Navigation. We hide it in small screens. -->
-					<nav class="mdl-navigation mdl-layout--large-screen-only">
-						<a class="mdl-navigation__link" href="<c:url value="/home/home.jsp" />">Login</a>
-					</nav>
-				</div>
-			</header>
-			<div class="mdl-layout__drawer">
-				<span class="mdl-layout-title">Options</span>
-				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="">Link</a> <a
-						class="mdl-navigation__link" href="">Link</a> <a
-						class="mdl-navigation__link" href="">Link</a> <a
-						class="mdl-navigation__link" href="">Link</a>
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">MyCollection</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		      <!-- Navigation. We hide it in small screens. -->
+		      	<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="<c:url value="/home" />">Login</a>
 				</nav>
-			</div>
-			<main class="mdl-layout__content">
-				<div class="page-content">
-					<form action="#">
-						<div
-							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-							<input class="mdl-textfield__input" type="text" id="sample3" /> 
-							<label class="mdl-textfield__label" for="sample3">Text...</label>
-						</div>
-						<button class="mdl-button mdl-js-button mdl-button--raised">Button</button>
-					</form>
-				</div>
-			</main>
-
-			<footer class="mdl-mini-footer">
-				<div class="mdl-mini-footer--left-section">
-					<div class="mdl-logo">More Information</div>
-					<ul class="mdl-mini-footer--link-list">
-						<li><a href="#">Help</a></li>
-						<li><a href="#">Privacy and Terms</a></li>
-						<li><a href="#">User Agreement</a></li>
-					</ul>
-				</div>
-			</footer>
-		</div>
+		    </div>
+		  </header>
+		  <main class="mdl-layout__content">
+		    <div class="page-content"><!-- Your content goes here --></div>
+		  </main>
+		</div>	
 	</body>
 </html> 

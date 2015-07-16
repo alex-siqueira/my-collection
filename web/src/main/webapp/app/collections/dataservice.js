@@ -2,11 +2,13 @@
     'use strict';
 
     angular
-    	.module('app.collections', ['ngResource'])
+    	.module('app.collections')
     	.factory('dataservice', dataservice);
     
-    function dataservice(){
-    	
+    function dataservice($resource){
+    	return $resource('resources/collections', {}, {
+    	      query: {method:'GET', isArray:true}
+        });
     }
     
 })();

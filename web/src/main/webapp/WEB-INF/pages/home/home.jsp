@@ -4,10 +4,14 @@
 <html ng-app="app">
 	<head>
 		<title>MyCollection</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.min.js"></script>
-		<script src="<c:url value="/app/collections/collections.module.js"/>"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.js"></script>
 		<script src="<c:url value="/app/app.module.js"/>"></script>
+		
+		<!-- Collections module -->
+		<script src="<c:url value="/app/collections/collections.module.js"/>"></script>
+		<script src="<c:url value="/app/collections/collections.js"/>"></script>
+		<script src="<c:url value="/app/collections/dataservice.js"/>"></script>
 
 		<!-- Material Design Lite -->
 		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>

@@ -3,9 +3,9 @@
 
     angular
     	.module('app.collections')
-    	.controller('Collections', Collections);
+    	.controller('CollectionsController', Collections);
     
     function Collections(dataservice){
-    	this.list = dataservice.query();
+    	this.list = dataservice.getCollections().query();
     }
 })();

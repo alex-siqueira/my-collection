@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-    	.module('app', ['app.collections']);
+    	.module('app', ['app.core', 'app.collections', 'app.items']);
 })();

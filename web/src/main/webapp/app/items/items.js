@@ -7,11 +7,11 @@
     
     function Items(dataservice){
     	this.collection = "Books";
-    	this.list = dataservice.getItems().query(this.collection);
+    	this.list = dataservice.items().query({collection: this.collection});
     	
     	this.selectCollection = function(value){
     		this.collection = value;
-    		this.list = dataservice.getItems().query(this.collection);
-    	}
+    		this.list = dataservice.items().query({collection: value});
+    	}    	
     }
 })();

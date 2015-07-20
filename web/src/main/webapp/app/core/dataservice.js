@@ -6,23 +6,18 @@
     	.factory('dataservice', dataservice);
     
     function dataservice($resource){
-    	var getCollections = function(){
-        	return $resource('resources/collections', {}, {
-      	      query: {method: 'GET', isArray: true}
-            });
+    	var Collections = function(){
+        	return $resource('resources/collections/:id');
         }
-    	var getItems = function() {
-	    	return $resource('resources/collections/:collection/items', {collection: '@'}, {
-	    	      query: {method: 'GET', isArray: true}
-	        });
+    	var Items = function() {
+	    	return $resource('resources/collections/:collection/items/:id', {collection: '@id'});
     	}
     	
-    	var services = {
-    			getCollections: getCollections,
-    			getItems: getItems
+    	var resources = {
+    			collections: Collections,
+    			items: Items
     	};
     	
-    	return services;
+    	return resources;
     }
-    
 })();

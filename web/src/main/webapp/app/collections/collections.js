@@ -6,6 +6,6 @@
     	.controller('CollectionsController', Collections);
     
     function Collections(dataservice){
-    	this.list = dataservice.getCollections().query();
+    	this.list = dataservice.collections().query();
     }
 })();

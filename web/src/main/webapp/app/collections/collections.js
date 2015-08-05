@@ -6,6 +6,14 @@
     	.controller('CollectionsController', Collections);
     
     function Collections(dataservice){
-    	this.list = dataservice.collections().query();
+    	var Collection = dataservice.collection();
+    	var vm = this;
+
+    	vm.list = Collection.query();
+    	
+    	vm.addCollection = function(name){
+    		var newCol = new Collection({name: name});
+    		newCol.$save().then(this.list = Collection.query());
+    	};
     }
 })();

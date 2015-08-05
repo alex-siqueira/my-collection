@@ -3,15 +3,17 @@
 
     angular
     	.module('app.items')
-    	.controller('ItemsController', Items);
+    	.controller('ItemsController', ['$scope', 'dataservice', Items]);
     
-    function Items(dataservice){
-    	this.collection = "Books";
-    	this.list = dataservice.items().query({collection: this.collection});
+    function Items($scope, dataservice){
+    	var Item = dataservice.item();
+    	var vm = this;
+    	vm.list = Item.query({collection: 'Books'});
     	
-    	this.selectCollection = function(value){
-    		this.collection = value;
-    		this.list = dataservice.items().query({collection: value});
-    	}    	
+    	$scope.$on('changedCollection', refreshItems);
+    	
+    	function refreshItems (event, newCollection){
+    		vm.list = Item.query({collection: newCollection});
+    	};
     }
 })();

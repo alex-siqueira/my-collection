@@ -3,14 +3,15 @@
 
     angular
     	.module('app')
-    	.controller('AppController', AppController);
+    	.controller('AppController', ['$scope', AppController]);
     
-    function AppController(){
-    	this.selectedCollection = "";
+    function AppController($scope){
+    	var vm = this;
+    	vm.selectedCollection = null;
     	
-    	this.setSelectedCollection = function(value){
-    		this.selectedCollection = value;
-    	}
+    	vm.setSelectedCollection = function(collection){
+    		this.selectedCollection = collection;
+    		$scope.$broadcast('changedCollection', collection);
+    	};
     }
-    
 })();

@@ -6,16 +6,16 @@
     	.factory('dataservice', dataservice);
     
     function dataservice($resource){
-    	var Collections = function(){
+    	var Collection = function(){
         	return $resource('resources/collections/:id');
         }
-    	var Items = function() {
+    	var Item = function() {
 	    	return $resource('resources/collections/:collection/items/:id', {collection: '@id'});
     	}
     	
     	var resources = {
-    			collections: Collections,
-    			items: Items
+    			collection: Collection,
+    			item: Item
     	};
     	
     	return resources;
